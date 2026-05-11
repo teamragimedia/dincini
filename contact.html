@@ -153,13 +153,13 @@
 
     <!-- ==================== Header Start Here ==================== -->
     <header
-      class="header header-one tw-transition-all tw-z-99 position-fixed top-0 start-0 w-100 py-lg-4 py-md-3 py-2"
+      class="header header-three position-fixed top-0 start-0 w-100 tw-py-5 border-0 tw-transition-all tw-z-99"
     >
-      <div class="container tw-container-1624-px">
+      <div class="container tw-container-1700-px">
         <nav
           class="d-flex align-items-center justify-content-between position-relative"
         >
-          <div class="header-left">
+          <div class="header-left d-flex align-items-center tw-gap-17">
             <!-- Logo Start -->
             <div class="logo">
               <a href="index.html" class="link">
@@ -181,17 +181,17 @@
               <ul
                 class="nav-menu d-xl-flex align-items-center tw-gap-8 tw-px-8"
               >
-                <li class="nav-menu__item">
+                <li class="nav-menu__item activePage">
                   <a
                     href="index.html"
-                    class="nav-menu__link tw-pe-4 text-black hover-text-main-600 tw-py-5 fw-medium w-100"
+                    class="nav-menu__link tw-pe-4 text--white hover-text-main-600 tw-py-5 fw-medium w-100"
                     >Home</a
                   >
                 </li>
                 <li class="nav-menu__item">
                   <a
                     href="about.html"
-                    class="nav-menu__link text-black hover-text-main-600 tw-py-5 fw-medium w-100"
+                    class="nav-menu__link text--white hover-text-main-600 tw-py-5 fw-medium w-100"
                     >About Us</a
                   >
                 </li>
@@ -199,15 +199,14 @@
                 <li class="nav-menu__item">
                   <a
                     href="event-gallery.html"
-                    class="nav-menu__link text-black hover-text-main-600 tw-py-5 fw-medium w-100"
+                    class="nav-menu__link hover-text-main-600 text-black tw-py-5 fw-medium w-100"
                     >Portfolio</a
                   >
                 </li>
-
-                <li class="nav-menu__item activePage">
+                <li class="nav-menu__item">
                   <a
                     href="contact.html"
-                    class="nav-menu__link text-black hover-text-main-600 tw-py-5 fw-medium w-100"
+                    class="nav-menu__link text--white hover-text-main-600 tw-py-5 fw-medium w-100"
                     >Contacts</a
                   >
                 </li>
@@ -447,14 +446,30 @@
       <!-- ============================ map section End ======================================= -->
 
       <!-- ==================== Footer Start Here ==================== -->
-      <footer
-        class="footer-two position-relative z-1 bg-img overflow-hidden"
-        data-background-image="assets/images/thumbs/ticket-bg1.webp"
-      >
-        <div class="py-120 border-bottom border-neutral-800">
+      <footer class="footer-three position-relative z-1 overflow-hidden">
+        <div class="py-120 border-bottom border-neutral-700 position-relative">
+          <div
+            class="footer-three-shape position-absolute w-auto top-0 end-0 z-n1"
+          >
+            <img
+              src="assets/images/shapes/banner-three-start2.webp"
+              alt="shape"
+              class="spinner"
+            />
+          </div>
+          <div
+            class="footer-three-shape shape-two position-absolute w-auto top-50 start-0 z-n1"
+          >
+            <img
+              src="assets/images/shapes/start-shape-three-4.webp"
+              alt="shape"
+              class="spinner"
+            />
+          </div>
+
           <div class="container">
             <div class="row justify-content-between g-4">
-              <div class="col-xl-5 col-md-6">
+              <div class="col-xl-3 col-md-6">
                 <div
                   data-aos="fade-up"
                   data-aos-duration="1000"
@@ -464,25 +479,78 @@
                     <img src="assets/images/logo/footer-logo.png" alt="Logo" />
                   </a>
                   <p class="tw-mb-8 text--white-70 fw-medium">
-                    Dini Cini Creations, Tushar Arcade, 3rd floor, Service road,
-                    Nagarbhavi, Bangalore-560072.
+                    Event is a great opportunity to engage with experts in the
+                    field, share ideas, and network with peers.
                   </p>
-                  <div>
-                    <a
-                      class="font-heading fw-bold tw-text-xl d-block text--white hover-text--white"
-                      href="+917892553861"
-                      >+91 7892553861</a
+                  <div
+                    class="footer-address"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="500"
+                  >
+                    <div class="d-flex flex-column gap-2">
+                      <div class="d-flex align-items-center tw-gap-3">
+                        <div>
+                          <span
+                            class="tw-w-9 tw-h-9 tw-display-inline-center bg--white-10 rounded-circle tw-text-6 text--white"
+                          >
+                            <i class="ph ph-envelope"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <a
+                            href="mailto:dinicinicreations@gmail.com"
+                            class="font-heading fw-medium tw-text-base d-block text--white-70 hover-text--white mb-1 text-nowrap"
+                          >
+                            dinicinicreations@gmail.com
+                          </a>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center tw-gap-3">
+                        <div>
+                          <span
+                            class="tw-w-9 tw-h-9 tw-display-inline-center bg--white-10 rounded-circle tw-text-6 text--white"
+                          >
+                            <i class="ph ph-phone"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <a
+                            href="tel:7045550127"
+                            class="font-heading fw-medium tw-text-base d-block text--white-70 hover-text--white mb-1 text-nowrap"
+                          >
+                            +91 7892553861
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="d-flex justify-content-between flex-column flex-sm-row tw-gap-3"
                     >
-                    <a
-                      href="mailto:yourdomain@gmail.com"
-                      class="fw-medium d-block text--white"
-                      >dinicinicreations@gmail.com</a
-                    >
+                      <div class="d-flex align-items-center tw-gap-3">
+                        <div>
+                          <span
+                            class="tw-w-9 tw-h-9 tw-display-inline-center bg--white-10 rounded-circle tw-text-6 text--white"
+                          >
+                            <i class="ph-bold ph-map-pin"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <p
+                            class="font-heading fw-medium tw-text-base d-block text--white-70 hover-text--white mb-1 text-nowrap"
+                          >
+                            Dini Cini Creations, Tushar Arcade, 3rd floor,<br />
+                            Service road, Nagarbhavi, Bangalore-560072
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="col-xl-3 col-md-6">
+              <div class="col-xl-2 col-md-6">
                 <div
                   class="footer-quick-links"
                   data-aos="fade-up"
@@ -490,7 +558,7 @@
                   data-aos-delay="300"
                 >
                   <h4
-                    class="footer-two-widget-title tw-text-6 fw-semibold text--white tw-mb-6"
+                    class="footer-three-widget-title tw-text-6 fw-semibold text--white tw-mb-6"
                   >
                     Quick links
                   </h4>
@@ -545,32 +613,82 @@
                 </div>
               </div>
 
-              <div class="col-xl-4 col-md-6">
+              <div class="col-xl-4 col-12">
                 <div
-                  class=""
+                  class="image-gallery mb-40"
                   data-aos="fade-up"
                   data-aos-duration="1000"
-                  data-aos-delay="500"
+                  data-aos-delay="400"
                 >
-                  <h4
-                    class="footer-two-widget-title fw-semibold text--white tw-mb-6"
+                  <div
+                    class="d-flex align-items-center justify-content-between"
                   >
-                    Let’s Create your own Event group.
-                  </h4>
-                  <p class="tw-mb-8 text--white-70 fw-medium">
-                    Making better things takes time. Drop us your email to stay
-                    in the know as we work.
-                  </p>
-                  <a
-                    class="theme-btn-main bg-main-600 text--white hover-text-heading tw-hover-btn"
-                    href="index.html"
-                  >
-                    <span class="theme-btn-text"> Buy A Ticket </span>
-                    <span class="theme-btn-icon">
-                      <i class="ph-fill ph-ticket"></i>
-                    </span>
-                    <i class="tw-btn-circle-dot bg--white"></i>
-                  </a>
+                    <h4
+                      class="footer-three-widget-title tw-text-6 fw-semibold text--white tw-mb-6"
+                    >
+                      Image Gallery
+                    </h4>
+                    <div class="d-flex align-items-center gap-3">
+                      <button
+                        class="swiper-button-prev-2 text--white tw-text-xl"
+                        aria-label="Previous slide"
+                      >
+                        <i class="ph ph-arrow-left"></i>
+                      </button>
+                      <button
+                        class="swiper-button-next-2 text--white tw-text-xl"
+                        aria-label="Next slide"
+                      >
+                        <i class="ph ph-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="image-gallery-wrapper">
+                    <div class="swiper swiper-container footer-gallery-active">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide w-auto">
+                          <div class="image-gallery-item">
+                            <img
+                              src="assets/images/images/Artboard 1.png"
+                              alt="Image"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide w-auto">
+                          <div class="image-gallery-item">
+                            <img
+                              src="assets/images/images/Artboard 2.png"
+                              alt="Image"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide w-auto">
+                          <div class="image-gallery-item">
+                            <img
+                              src="assets/images/images/Artboard 3.png"
+                              alt="Image"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide w-auto">
+                          <div class="image-gallery-item">
+                            <img
+                              src="assets/images/images/Artboard 4.png"
+                              alt="Image"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide w-auto">
+                          <div class="image-gallery-item">
+                            <img
+                              src="assets/images/images/Artboard 5.png"
+                              alt="Image"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
