@@ -1,0 +1,51 @@
+/* ================================= Classes Css Start =========================== */
+.col-xs-6 {
+    @media screen and (min-width: 425px) and (max-width: 575px) {
+        width: 50%;
+    }
+}
+
+.tw-leading {
+    &-none {
+        line-height: 1;
+    }
+}
+
+.opacity-05 {
+    opacity: .05;
+}
+
+.opacity-1 {
+    opacity: .1;
+}
+
+
+.home-one-bg {
+    background-color: #0C0B1C !important;
+}
+
+.home-two-bg {
+    background-color: #0C0B1C !important;
+}
+
+.home-three-bg {
+    background-color: hsl(var(--white)) !important;
+}
+
+.home-four-bg {
+    background-color: hsl(var(--white)) !important;
+}
+
+.home-five-bg {
+    background: #04000A;
+}
+
+.home-six-bg {
+    background: #101435;
+}
+
+.pointer-event-none {
+    pointer-events: none;
+}
+
+/* ================================= Classes Css End =========================== */

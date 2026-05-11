@@ -1,0 +1,81 @@
+// ============================ Mixins Css Start ============================
+// Media Breakpoint for Each Device Start
+
+// Extra Extra Small
+@mixin xxsm-screen {
+  @media screen and (max-width: 374px) {
+    @content;
+  }
+}
+
+// EXtra Small
+@mixin xsm-screen {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+// Small Screen (max-width: 575)
+@mixin sm-screen {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+//Medium Screen (max-width: 767)
+@mixin md-screen {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+//Large Screen (max-width: 991)
+@mixin lg-screen {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+//EXtra Large Screen (max-width: 1199)
+@mixin xl-screen {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+//EXtra EXtra Large Screen i (max-width: 1299)
+@mixin xxl-screen {
+  @media screen and (max-width: 1299px) {
+    @content;
+  }
+}
+
+//EXtra Large Screen ii (max-width: 1399)
+@mixin xxxl-screen {
+  @media screen and (max-width: 1399px) {
+    @content;
+  }
+}
+
+//EXtra Large Screen iii (max-width: 1499)
+@mixin xxxxl-screen {
+  @media screen and (max-width: 1499px) {
+    @content;
+  }
+}
+
+@mixin xxxxxl-screen {
+  @media screen and (max-width: 1599px) {
+    @content;
+  }
+}
+
+@mixin xxxxxxl-screen {
+  @media screen and (max-width: 1699px) {
+    @content;
+  }
+}
+
+/* Media Breakpoint for Each Device End */
+
+// ============================ Mixins Css End ============================

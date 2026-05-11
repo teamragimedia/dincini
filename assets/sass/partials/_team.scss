@@ -1,0 +1,672 @@
+.team {
+    &-bg-blur {
+        top: 15% !important;
+        left: 5% !important;
+        background-image: var(--main-two-gradient) !important;
+    }
+
+    &-area {
+
+        .team-card {
+            &-thumb-wrapper {
+                position: relative;
+                z-index: 1;
+                transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.4s;
+
+                &.thumb-wrapper-odd {
+                    border-radius: 0 150px 150px 150px;
+                    padding: 0 10px 10px 0;
+                }
+
+                &.thumb-wrapper-even {
+                    border-radius: 150px 0 150px 150px;
+                    padding: 0 0 10px 10px;
+                }
+
+                .team-thumb-overlay {
+                    position: absolute;
+                    inset-block-start: 10px;
+                    inset-block-end: 0;
+                    inset-inline-start: 0;
+                    inset-inline-end: 0;
+                    border: 1px dashed #D9D9D9;
+                    border-radius: inherit;
+                    transition: 0.4s;
+                    z-index: 2;
+                }
+
+                .team-thumb {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: inherit;
+                    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.4s;
+                }
+
+                .team-social {
+                    position: absolute;
+                    bottom: 10px;
+                    inset-inline-start: 20px;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    z-index: 5;
+
+                    &-button {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: hsl(var(--white));
+                        background: var(--main-gradient);
+                        font-size: 18px;
+                        transition: 0.4s;
+
+                        &:hover~.team-social-items .team-social-item {
+                            opacity: 1;
+                            transform: translateX(0);
+                            visibility: visible;
+                            pointer-events: auto;
+                        }
+                    }
+
+                    &-items {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                        transition: 0.4s;
+
+                        .team-social-item:nth-child(1) {
+                            transition-delay: 0.1s;
+                        }
+
+                        .team-social-item:nth-child(2) {
+                            transition-delay: 0.2s;
+                        }
+
+                        .team-social-item:nth-child(3) {
+                            transition-delay: 0.3s;
+                        }
+
+                        .team-social-item:nth-child(4) {
+                            transition-delay: 0.4s;
+                        }
+
+                        .team-social-item:nth-child(5) {
+                            transition-delay: 0.5s;
+                        }
+
+                        &:hover {
+                            .team-social-item {
+                                opacity: 1;
+                                transform: translateX(0);
+                                visibility: visible;
+                                pointer-events: auto;
+                            }
+                        }
+                    }
+
+                    &-item {
+                        width: 46px;
+                        height: 46px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: hsl(var(--white));
+                        background: hsl(var(--black-two));
+                        font-size: 18px;
+                        transform: translateX(-10px);
+                        transition: all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+                        opacity: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+
+                        &:hover {
+                            background: var(--main-gradient);
+                        }
+                    }
+
+                    @include xl-screen {
+                        gap: 8px;
+
+                        &-button {
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                        &-items {
+                            gap: 2px;
+                        }
+
+                        &-item {
+                            width: 36px;
+                            height: 36px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    border-radius: 0;
+
+                    .team-thumb {
+                        transform: rotate(5deg) scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.team-two {
+    &-bg-blur {
+        top: 15% !important;
+        left: 5% !important;
+        background-image: var(--main-gradient-two) !important;
+    }
+
+    &-area {
+        .team-card-two {
+            .team-thumb {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: inherit;
+                transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.4s;
+                border-radius: 12px;
+            }
+
+            .team-social {
+                position: absolute;
+                bottom: 10px;
+                right: 20px;
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                gap: 12px;
+                z-index: 5;
+
+                &-button {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: hsl(var(--white));
+                    background: var(--main-600);
+                    font-size: 18px;
+                    transition: 0.4s;
+
+                    &:hover~.team-social-items .team-social-item {
+                        opacity: 1;
+                        transform: translateX(-0px);
+                        visibility: visible;
+                        pointer-events: auto;
+                    }
+                }
+
+                &-items {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    transition: 0.4s;
+
+                    .team-social-item:nth-child(5) {
+                        transition-delay: 0.1s;
+                    }
+
+                    .team-social-item:nth-child(4) {
+                        transition-delay: 0.2s;
+                    }
+
+                    .team-social-item:nth-child(3) {
+                        transition-delay: 0.3s;
+                    }
+
+                    .team-social-item:nth-child(2) {
+                        transition-delay: 0.4s;
+                    }
+
+                    .team-social-item:nth-child(1) {
+                        transition-delay: 0.5s;
+                    }
+
+                    &:hover {
+                        .team-social-item {
+                            opacity: 1;
+                            transform: translateX(-0);
+                            visibility: visible;
+                            pointer-events: auto;
+                        }
+                    }
+                }
+
+                &-item {
+                    width: 46px;
+                    height: 46px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: hsl(var(--white));
+                    background: hsl(var(--black-two));
+                    font-size: 18px;
+                    transform: translateX(10px);
+                    transition: all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+
+                    &:hover {
+                        background: var(--main-600);
+                    }
+                }
+
+                @include xl-screen {
+                    gap: 8px;
+
+                    &-button {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    &-items {
+                        gap: 2px;
+                    }
+
+                    &-item {
+                        width: 36px;
+                        height: 36px;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &:hover {
+                border-radius: 0;
+
+                .team-thumb {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+
+.team-three {
+    &-area {
+        background: var(--main-seven-600);
+
+        .vertical-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .title-vertical-bold {
+                -webkit-text-stroke-width: 1.5px;
+                -webkit-text-stroke-color: rgba(255, 255, 255, 0.33);
+                color: transparent !important;
+                font-family: var(--heading-font);
+                font-size: 180px;
+                font-weight: 400;
+                line-height: 87.222%;
+                letter-spacing: 1.8px;
+                text-transform: uppercase;
+                writing-mode: vertical-rl;
+                text-orientation: sideways-right;
+                transform: rotate(180deg);
+
+                @include xxxl-screen {
+                    font-size: 140px;
+                }
+
+                @include xxl-screen {
+                    font-size: 120px;
+                }
+
+                @include xl-screen {
+                    font-size: 100px;
+                    writing-mode: horizontal-tb;
+                    text-orientation: sideways-right;
+                    transform: rotate(0deg);
+                }
+
+                @include md-screen {
+                    font-size: 80px;
+                }
+
+                @include sm-screen {
+                    font-size: 60px;
+                }
+            }
+
+        }
+
+        .team-card-three-parent-wrapper {
+            display: flex;
+            gap: 24px;
+
+            @include xsm-screen {
+                flex-direction: column;
+            }
+
+            .team-card-three-wrapper {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                @include xl-screen {
+                    gap: 24px;
+                }
+            }
+        }
+
+        .ellipse-shape {
+            position: absolute;
+            bottom: -70%;
+            right: -50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+
+            @include xxl-screen {
+                max-width: 800px;
+            }
+        }
+
+        .team-card-three {
+            display: flex;
+            gap: 24px;
+
+            @include lg-screen {
+                flex-direction: column;
+            }
+
+            @include xsm-screen {
+                margin: 0 auto;
+            }
+
+            .team-card-thumb-wrapper {
+                max-width: 210px;
+                max-height: 250px;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                overflow: hidden;
+
+                @include xxl-screen {
+                    max-width: 200px;
+                    max-height: 220px;
+                }
+
+                @include sm-screen {
+                    max-width: 180px;
+                    max-height: 200px;
+                }
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .team-badge {
+                display: inline-flex;
+                padding: 8px 12px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 4px;
+                background: var(--main-600);
+                margin-bottom: 12px;
+            }
+
+            .team-social-items {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                .team-social-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: hsl(var(--white));
+                    font-size: 16px;
+                }
+            }
+        }
+
+    }
+}
+
+// Home 3 End
+
+
+
+// Home 4 Start
+.team-four {
+
+    &-area {
+        .team-card-four {
+            .team-card-thumb-wrapper {
+                margin-bottom: 24px;
+            }
+
+            .team-card-content {
+                .team-badge {
+                    width: fit-content;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+                    background: var(--main-50);
+                    color: var(--main-600);
+                    margin-bottom: 12px;
+                    text-align: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .team-name {
+                    color: hsl(var(--heading-color));
+                    font-family: var(--heading-font);
+                    font-size: 28px;
+                    font-weight: 700;
+                    letter-spacing: -0.56px;
+                    margin-bottom: 16px;
+                    text-align: center;
+                }
+
+                .team-social-items {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 16px;
+
+                    .team-social-item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 20px;
+
+                        &.facebook {
+                            color: #3b5998;
+                        }
+
+                        &.x {
+                            color: #1DA1F2;
+                        }
+
+                        &.instagram {
+                            color: #C13584;
+                        }
+
+                        &.youtube {
+                            color: #FF0000;
+                        }
+
+                        &.linkedin {
+                            color: #0077B5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-shape {
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+
+        &.shape-one {
+            top: 5%;
+            right: 10%;
+        }
+
+        &.shape-two {
+            bottom: 15%;
+            right: 3%;
+        }
+    }
+}
+// Home 4 End
+
+
+
+// Home 6 Start
+.team-six {
+    &-card {
+        &-content {
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+
+            @include lg-screen {
+                left: 16px;
+                right: 16px;
+                bottom: 16px;
+                padding: 16px;
+            }
+
+            @include md-screen {
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
+                padding: 12px;
+            }
+        }
+    }
+}
+
+// Home 6 End
+
+
+
+.team-details {
+
+    &-title {
+        margin-bottom: 36px;
+
+        @include xl-screen {
+            margin-bottom: 32px;
+        }
+
+        @include lg-screen {
+            margin-bottom: 24px;
+        }
+
+        @include md-screen {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-para {
+        font-size: 18px;
+
+        @include lg-screen {
+            font-size: 16px;
+        }
+    }
+
+    &-content {
+        margin-bottom: 60px;
+
+        @include xl-screen {
+            margin-bottom: 48px;
+        }
+
+        @include lg-screen {
+            margin-bottom: 32px;
+        }
+
+        @include md-screen {
+            margin-bottom: 24px;
+        }
+    }
+
+    &-info {
+        &-wrapper {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+
+            @include xxl-screen {
+                gap: 24px;
+            }
+
+            @include lg-screen {
+                gap: 16px;
+            }
+
+            @include sm-screen {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        &-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: hsl(var(--white));
+            background: hsl(var(--white) / 0.1);
+
+            @include md-screen {
+                font-size: 20px;
+            }
+        }
+
+        &-text {
+            font-size: 22px;
+
+            @include lg-screen {
+                font-size: 18px;
+            }
+
+            @include sm-screen {
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.singer-five {
+    &-area {
+
+        .singer-item {
+            width: auto;
+
+            .singer-img {
+                max-width: 410px;
+                max-height: 410px;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                margin-bottom: 32px;
+
+                @include xxxl-screen {
+                    max-width: 350px;
+                    max-height: 350px;
+                }
+
+                @include lg-screen {
+                    max-width: 300px;
+                    max-height: 300px;
+                }
+
+                @include md-screen {
+                    max-width: 200px;
+                    max-height: 200px;
+                }
+
+                @include sm-screen {
+                    max-width: 150px;
+                    max-height: 150px;
+                }
+            }
+
+            .singer-content {
+                .singer-designation {
+                    width: fit-content;
+                    margin-right: auto;
+                    margin-left: auto;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+                    background: hsl(var(--white) / 0.1);
+                    color: hsl(var(--white));
+                    margin-bottom: 16px;
+                }
+
+                .singer-name {
+                    color: hsl(var(--white));
+                    font-family: var(--heading-font);
+                    font-size: 28px;
+                    font-weight: 700;
+                    letter-spacing: -0.54px;
+                    text-align: center;
+                    margin-bottom: 32px;
+                }
+
+                .singer-social-items {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 16px;
+
+                    .singer-social-item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: hsl(var(--white));
+                        font-size: 20px;
+                        transition: all 0.4s ease-in-out;
+
+                        &:hover {
+                            color: var(--main-600);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

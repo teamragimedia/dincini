@@ -1,0 +1,14 @@
+/* Rotate Circle Css Start */
+.rotating-text {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-content {
+        animation: rotateRight 10s linear infinite;
+    }
+}

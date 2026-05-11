@@ -1,0 +1,175 @@
+.bg-blur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    max-width: 370px;
+    max-height: 370px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    pointer-events: none;
+    filter: blur(80px);
+    background-image: var(--main-gradient);
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.divider.divider-vertical {
+    width: 1px;
+    height: 100px;
+    border-right: 1px solid #D9D9D9;
+}
+
+.divider.divider-dashed {
+    border-bottom: 1px dashed #D9D9D9;
+}
+
+.divider.divider-vertical.divider-dashed {
+    border-right: 1px dashed #D9D9D9;
+}
+
+.divider-main-two {
+    border-color: var(--main-two-600) !important;
+}
+
+.title-divider {
+    position: relative;
+    padding-left: 36px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 60%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 1px;
+        background: hsl(var(--white));
+    }
+
+    &.divider-start {
+        &::before {
+            width: 28px;
+        }
+    }
+}
+
+
+// swiper
+.swiper-notification {
+    display: none;
+}
+
+
+// writing mode helper
+.writing-mode-vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+}
+
+.writing-mode-md-vertical-rl {
+    @media screen and (min-width: 768px) {
+        writing-mode: vertical-rl;
+        text-orientation: sideways-right;
+    }
+}
+
+.writing-mode-vertical-rl-180 {
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    transform: rotate(180deg);
+}
+
+.writing-mode-md-vertical-rl-180 {
+    @media screen and (min-width: 768px) {
+        writing-mode: vertical-rl;
+        text-orientation: sideways-right;
+        transform: rotate(180deg);
+    }
+}
+
+.writing-mode-vertical-lr {
+    writing-mode: vertical-lr;
+    text-orientation: sideways-left;
+}
+
+.writing-mode-md-vertical-lr {
+    @media screen and (min-width: 768px) {
+        writing-mode: vertical-lr;
+        text-orientation: sideways-left;
+    }
+}
+
+.writing-mode-vertical-lr-180 {
+    writing-mode: vertical-lr;
+    text-orientation: sideways-left;
+    transform: rotate(180deg);
+}
+
+.writing-mode-lg-vertical-lr-180 {
+    @media screen and (min-width: 992px) {
+        writing-mode: vertical-lr;
+        text-orientation: sideways-left;
+        transform: rotate(180deg);
+    }
+}
+
+.writing-mode-md-vertical-lr-180 {
+    @media screen and (min-width: 768px) {
+        writing-mode: vertical-lr;
+        text-orientation: sideways-left;
+        transform: rotate(180deg);
+    }
+}
+
+.writing-mode-horizontal-tb {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+}
+
+// direction rtl
+.direction-rtl {
+    direction: rtl;
+}
+
+.direction-ltr {
+    direction: ltr;
+}
+
+// text overflow
+.text-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-overflow-multiple {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-overflow-multiple-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-overflow-multiple-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

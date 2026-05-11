@@ -1,0 +1,13 @@
+.font {
+    &-heading {
+        font-family: var(--heading-font);
+    }
+
+    &-body {
+        font-family: var(--body-font);
+    }
+
+    &-caveat {
+        font-family: var(--caveat-font) !important;
+    }
+}

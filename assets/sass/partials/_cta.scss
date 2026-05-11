@@ -1,0 +1,304 @@
+.cta {
+    &-area {
+        .cta-title {
+            @include xsm-screen {
+                font-size: 40px;
+            }
+        }
+
+        .cta-subtitle {
+            @include xsm-screen {
+                font-size: 24px;
+            }
+        }
+
+        .cta-description {
+            @include xsm-screen {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+.cta-two {
+    &-area {
+        .cta-two-form {
+            .cta-input-btn-wrapper {
+                display: flex;
+                align-items: center;
+                border-radius: 32px;
+                overflow: hidden;
+
+                .input-field {
+                    width: 100%;
+                    padding: 20px 40px;
+                    border: unset;
+                    outline: unset;
+
+                    @include xl-screen {
+                        padding: 16px 32px;
+                    }
+
+                    @include lg-screen {
+                        padding: 12px 24px;
+                    }
+
+                    @include md-screen {
+                        padding: 12px 12px;
+                    }
+                }
+
+                .cta-input-btn {
+                    padding: 20px 40px;
+                    border: unset;
+                    outline: unset;
+                    background: hsl(var(--black));
+                    color: hsl(var(--white));
+                    cursor: pointer;
+                    text-wrap: nowrap;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    transition: all 0.3s ease-in-out;
+                    font-size: 16px;
+
+                    @include xl-screen {
+                        padding: 16px 32px;
+                    }
+
+                    @include lg-screen {
+                        padding: 12px 24px;
+                    }
+
+                    @include md-screen {
+                        padding: 12px 12px;
+                    }
+
+                    &:hover {
+                        background: hsl(var(--white));
+                        color: hsl(var(--black));
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+.cta-three {
+    &-area {
+        .cta-three-content-wrapper {
+            padding: 100px;
+            border-radius: 200px;
+            background: var(--main-600);
+            box-shadow: 8px -8px 0 0 var(--main-four-600);
+            margin: 12px;
+
+            @include xxxl-screen {
+                padding: 80px;
+            }
+
+            @include xxl-screen {
+                padding: 60px;
+            }
+
+            @include lg-screen {
+                padding: 32px 60px;
+            }
+
+            @include md-screen {
+                padding: 24px 40px;
+            }
+
+            @include sm-screen {
+                padding: 16px 8px;
+                border-radius: 40px;
+                margin: 10px 0;
+            }
+        }
+
+        .cta-three-form {
+            .cta-input-btn-wrapper {
+                display: flex;
+                align-items: center;
+                border-radius: 32px;
+                overflow: hidden;
+
+                .input-field {
+                    width: 100%;
+                    padding: 20px 40px;
+                    border: unset;
+                    outline: unset;
+
+                    @include xl-screen {
+                        padding: 16px 32px;
+                    }
+
+                    @include lg-screen {
+                        padding: 12px 24px;
+                    }
+
+                    @include md-screen {
+                        padding: 12px 12px;
+                    }
+                }
+
+                .cta-input-btn {
+                    padding: 20px 40px;
+                    border: unset;
+                    outline: unset;
+                    background: var(--main-two-600);
+                    color: hsl(var(--white));
+                    cursor: pointer;
+                    text-wrap: nowrap;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    transition: all 0.3s ease-in-out;
+                    font-size: 16px;
+
+                    @include xl-screen {
+                        padding: 16px 32px;
+                    }
+
+                    @include lg-screen {
+                        padding: 12px 24px;
+                    }
+
+                    @include md-screen {
+                        padding: 12px 12px;
+                    }
+
+                    @include sm-screen {
+                        padding: 14px 8px;
+                        font-size: 14px;
+                        gap: 4px;
+                    }
+
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+
+            }
+        }
+
+        .ellipse-shape {
+            position: absolute;
+            top: -100%;
+            left: -45%;
+
+            @include xxl-screen {
+                top: -80%;
+                max-width: 600px;
+            }
+        }
+
+        .cta-three-shape {
+            &.shape-one {
+                top: 30%;
+                right: 10%;
+
+                @include xl-screen {
+                    top: 20%;
+                }
+
+                @include lg-screen {
+                    display: none;
+                }
+            }
+
+            &.shape-two {
+                left: 10%;
+                bottom: 0;
+            }
+        }
+    }
+
+}
+
+
+.cta-five {
+    &-wrapper {
+        width: 100%;
+        padding: 80px 0;
+        border-radius: 32px;
+        background: var(--main-two-600);
+
+        @include lg-screen {
+            padding: 60px 0;
+        }
+
+        @include md-screen {
+            padding: 40px 0;
+        }
+    }
+
+    &-form {
+        .cta-input-btn-wrapper {
+            display: flex;
+            align-items: center;
+            border-radius: 32px;
+            overflow: hidden;
+
+            .input-field {
+                width: 100%;
+                padding: 20px 40px;
+                border: unset;
+                outline: unset;
+
+                @include xl-screen {
+                    padding: 16px 32px;
+                }
+
+                @include lg-screen {
+                    padding: 12px 24px;
+                }
+
+                @include md-screen {
+                    padding: 12px 12px;
+                }
+            }
+
+            .cta-input-btn {
+                padding: 20px 40px;
+                border: unset;
+                outline: unset;
+                background: hsl(var(--black));
+                color: hsl(var(--white));
+                cursor: pointer;
+                text-wrap: nowrap;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                transition: all 0.3s ease-in-out;
+                font-size: 16px;
+
+                @include xl-screen {
+                    padding: 16px 32px;
+                }
+
+                @include lg-screen {
+                    padding: 12px 24px;
+                }
+
+                @include md-screen {
+                    padding: 12px 12px;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+        }
+    }
+}

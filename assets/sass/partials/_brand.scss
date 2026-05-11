@@ -1,0 +1,180 @@
+// Home 1 Start
+.brand {
+    &-area {
+
+        .section-wrapper {
+            margin-bottom: 80px;
+
+            @include xl-screen {
+                margin-bottom: 60px;
+            }
+
+            @include lg-screen {
+                margin-bottom: 40px;
+            }
+
+            .section-title {
+                font-size: 120px;
+
+                @include xxxxl-screen {
+                    font-size: 100px;
+                }
+
+                @include xxxl-screen {
+                    font-size: 90px;
+                }
+
+                @include xxl-screen {
+                    font-size: 80px;
+                }
+
+                @include xl-screen {
+                    font-size: 70px;
+                }
+
+                @include lg-screen {
+                    font-size: 60px;
+                }
+
+                @include md-screen {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+// Home 1 End
+
+// Home 3 Start
+.brand-three {
+    &-area {
+        background: #F5F6F8;
+
+        &::after,
+        &::before {
+            position: absolute;
+            content: '';
+            z-index: -1;
+            max-width: 776px;
+            max-height: 776px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            filter: blur(200px);
+        }
+
+        &::after {
+            background: #FFF5CE;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+
+        &::before {
+            background: #D9CEFF;
+            bottom: 0;
+            left: 0;
+            transform: translate(-50%, 50%);
+        }
+
+        .ellipse-shape {
+            position: absolute;
+            top: 20%;
+            left: -10%;
+            transform: translate(-50%, -50%);
+            z-index: -3;
+
+            @media (max-width: 1800px) {
+                display: none;
+            }
+        }
+    }
+}
+
+// Home 3 End
+
+
+
+
+// Home 3 Start
+.brand-four {
+
+    &-area {
+
+        .brand-wrapper {
+            border-radius: 12px;
+            background: #FFF;
+            box-shadow: 15px 17px 129.3px 18px rgba(22, 8, 72, 0.06);
+        }
+    }
+
+    &-shape {
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+
+        &.shape-one {
+            bottom: 10%;
+            left: 12%;
+            max-width: 140px;
+            max-height: 140px;
+            width: 100%;
+            height: 100%;
+        }
+
+        &.shape-two {
+            top: 20%;
+            right: 10%;
+            max-width: 50px;
+            max-height: 50px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+// Home 3 End
+
+
+
+// Home 5 Start
+.brand-five {
+    &-area {
+        .section-title {
+            font-size: 172px;
+            color: var(--main-two-600);
+            font-family: var(--caveat-font);
+            text-align: center;
+            font-weight: 400;
+            line-height: 70%;
+            letter-spacing: -3.52px;
+            margin-bottom: 80px;
+
+            @include xxxl-screen {
+                font-size: 150px;
+            }
+
+            @include xxl-screen {
+                font-size: 130px;
+                margin-bottom: 60px;
+            }
+
+            @include xl-screen {
+                font-size: 100px;
+                margin-bottom: 40px;
+            }
+
+            @include lg-screen {
+                font-size: 80px;
+                margin-bottom: 32px;
+            }
+
+            @include sm-screen {
+                font-size: 60px;
+            }
+        }
+    }
+}
+
+// Home 5 End

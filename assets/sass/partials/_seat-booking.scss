@@ -1,0 +1,121 @@
+// Home 2 Start
+.seat-booking {
+    &-area {
+        .section-title {
+            @include xsm-screen {
+                font-size: 40px;
+            }
+        }
+
+        .section-description-title {
+            margin-bottom: 24px;
+
+            @include lg-screen {
+                margin-bottom: 20px;
+            }
+
+            @include md-screen {
+                margin-bottom: 16px;
+                font-size: 18px;
+            }
+        }
+
+        .section-description {
+            @include sm-screen {
+                font-size: 16px;
+            }
+        }
+
+        &-quote-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+
+            @include xxxl-screen {
+                gap: 30px;
+            }
+
+            @include lg-screen {
+                gap: 20px;
+            }
+
+            @include md-screen {
+                gap: 16px;
+                flex-direction: column;
+                align-self: start;
+            }
+        }
+
+        .seat-booking-sticker {
+            .ticket-button {
+                padding: 40px;
+                text-align: center;
+
+                @include xxl-screen {
+                    padding: 30px;
+                }
+
+                @include lg-screen {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+
+// Home 2 End
+
+
+// Home 4 Start
+.seat-booking-four {
+    &-card {
+        padding: 60px 100px;
+
+        @include xxl-screen {
+            padding: 40px 80px;
+        }
+
+        @include lg-screen {
+            padding: 32px 60px;
+        }
+
+        @include md-screen {
+            padding: 24px 40px;
+        }
+
+        @include sm-screen {
+            padding: 20px;
+        }
+
+        &-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid hsl(var(--white));
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 32px;
+            margin-top: -100px;
+            font-size: 48px;
+            color: hsl(var(--white));
+
+            @include xxl-screen {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 24px;
+                font-size: 40px;
+            }
+
+            @include lg-screen {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 20px;
+                margin-top: -60px;
+                font-size: 32px;
+            }
+        }
+    }
+}

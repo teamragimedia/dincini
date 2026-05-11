@@ -1,0 +1,51 @@
+// Home 6 Start
+.choose-six {
+    &-area {
+        &::before {
+            content: '';
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            width: 40%;
+            height: 100%;
+            background: var(--main-five-600);
+
+            @include lg-screen {
+                display: none;
+            }
+        }
+    }
+
+    &-banner {
+        max-width: unset;
+        width: unset;
+        direction: rtl;
+
+        img {
+            max-width: unset;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-list {
+        list-style: number;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-left: 20px;
+
+        li {
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: -0.36px;
+            color: hsl(var(--white));
+
+            @include lg-screen {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// Home 6 End

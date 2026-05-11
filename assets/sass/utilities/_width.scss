@@ -1,0 +1,170 @@
+/* width Css Class start */
+@each $property, $value in $spaces {
+  .tw-w-#{$property} {
+    width: $value;
+  }
+}
+
+@each $property, $value in $spaces {
+  .tw-mw-#{$property} {
+    max-width: $value;
+  }
+}
+
+.tw-w {
+  &-100 {
+    width: 100%;
+  }
+
+  &-50 {
+    width: 50%;
+  }
+
+  &-25 {
+    width: 25%;
+  }
+}
+
+.min-w-max {
+  min-width: max-content;
+}
+
+.tw-w {
+  &-px {
+    width: 1px;
+  }
+
+  &-100-px {
+    width: 100px;
+  }
+
+  &-min-100-px {
+    min-width: 100px;
+  }
+
+  &-207-px {
+    width: 207px;
+  }
+
+  &-232-px {
+    width: 232.667px;
+  }
+
+  &-300-px {
+    width: 300px;
+  }
+
+  &-330-px {
+    width: 330px;
+  }
+
+  &-435-px {
+    width: 435px;
+  }
+
+  &-480-px {
+    width: 480px;
+  }
+
+  &-510-px {
+    width: 510px;
+  }
+
+  &-520-px {
+    width: 520px;
+  }
+
+  &-528-px {
+    width: 528px;
+  }
+
+  &-550-px {
+    width: 550px;
+  }
+
+  &-704-px {
+    width: 704px;
+  }
+
+  &-1594-px {
+    width: 1594px;
+  }
+
+  &-max {
+    width: max-content;
+  }
+
+  &-min {
+    width: min-content;
+  }
+
+  &-fit {
+    width: fit-content;
+  }
+}
+
+.tw-w-xl {
+  @media (min-width: 1200px) {
+    &-100 {
+      width: 100%;
+    }
+
+    &-50 {
+      width: 50%;
+    }
+
+    &-25 {
+      width: 25%;
+    }
+  }
+}
+
+.tw-w-lg {
+  @media (min-width: 992px) {
+    &-100 {
+      width: 100%;
+    }
+
+    &-50 {
+      width: 50%;
+    }
+
+    &-25 {
+      width: 25%;
+    }
+  }
+}
+
+.tw-w-sm {
+  @media (min-width: 576px) {
+    &-100 {
+      width: 100%;
+    }
+
+    &-50 {
+      width: 50%;
+    }
+
+    &-25 {
+      width: 25%;
+    }
+  }
+}
+
+.tw-w-xs {
+  @media (min-width: 420px) {
+    &-100 {
+      width: 100%;
+    }
+
+    &-50 {
+      width: 50%;
+    }
+
+    &-25 {
+      width: 25%;
+    }
+  }
+}
+
+/* width Css Class End */

@@ -1,0 +1,13 @@
+.tw-display {
+    &-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-inline-center {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

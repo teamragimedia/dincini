@@ -1,0 +1,67 @@
+// home 1 start
+.counter {
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-text {
+        margin-left: -16px;
+    }
+}
+
+// home 1 end
+
+
+// home 3 start
+.counter-three {
+
+    &-wrapper {
+        @include md-screen {
+            flex-wrap: wrap;
+        }
+
+        .counter-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+    }
+}
+
+// home 3 end
+
+
+// home 4 start
+.counter-four {
+
+    &-paragraph {
+        font-size: 32px;
+
+        @include lg-screen {
+            font-size: 28px;
+        }
+
+        @include md-screen {
+            font-size: 24px;
+        }
+
+        @include sm-screen {
+            font-size: 20px;
+        }
+    }
+}
+
+// home 4 end
+
+
+// Home 6 Start
+.counter-six {
+    @include lg-screen {
+        padding-top: 0;
+    }
+}
+
+// Home 6 End

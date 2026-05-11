@@ -1,0 +1,1015 @@
+// Home 1 start
+.ticket {
+    &-area {
+        &-spriller-1 {
+            top: 10%;
+            left: -10%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        &-shape {
+            z-index: -1;
+            bottom: 0;
+            right: 0;
+        }
+
+        &-spinner-img {
+            width: 80px;
+            height: 80px;
+            min-width: 80px;
+
+            min-height: 80px img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-bg-blur-two {
+            top: unset !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            background-image: var(--main-gradient-two) !important;
+            transform: translate(0, 50%) !important;
+        }
+
+        &-bg-blur-three {
+            left: unset !important;
+            right: -1% !important;
+            background-image: var(--main-two-gradient) !important;
+            transform: translate(0, 0) !important;
+        }
+
+        &-bottom {
+            margin-top: 200px;
+
+            @include lg-screen {
+                margin-top: 20px;
+            }
+        }
+
+        &-spriller-2 {
+            bottom: 5%;
+            right: -5%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .section-wrapper {
+            margin-bottom: 40px;
+
+            @include lg-screen {
+                margin-bottom: 32px;
+            }
+
+            @include sm-screen {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &-card {
+        background-color: hsl(var(--black-three));
+        padding: 60px;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        min-height: 550px;
+        position: relative;
+        width: 100%;
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+
+        &-name {
+            color: var(--main-600);
+            text-align: center;
+            font-family: var(--caveat-font);
+            font-size: 32px;
+            font-weight: 400;
+            letter-spacing: 5.7px;
+            margin-bottom: 28px;
+            line-height: 1;
+        }
+
+        &-price {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            margin-bottom: 32px;
+
+            &-amount {
+                color: hsl(var(--white));
+                font-family: var(--heading-font);
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 1;
+            }
+
+            &-currency {
+                color: hsl(var(--white));
+                font-family: var(--heading-font);
+                font-size: 36px;
+                font-weight: 700;
+            }
+        }
+
+        &-description {
+            color: hsl(var(--white) / 0.7);
+            text-align: center;
+            font-family: var(--body-font);
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: -0.32px;
+            margin-bottom: 36px;
+        }
+
+        &-features {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+
+
+            &-item {
+                &-icon {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 8px;
+                    height: 8px;
+                    min-width: 8px;
+                    min-height: 8px;
+                    margin-right: 8px;
+                    border-radius: 50%;
+                    background: var(--main-600);
+                }
+
+                &-text {
+                    color: hsl(var(--white));
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &.active {
+            background: var(--main-600);
+            background-origin: border-box;
+
+            .ticket-card-name {
+                color: hsl(var(--white));
+            }
+
+            .ticket-card-features-item-icon {
+                background: hsl(var(--white));
+            }
+        }
+
+        &:hover {
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+        }
+
+        @include xxxl-screen {
+            padding: 40px;
+            min-height: 450px;
+
+            &-name {
+                font-size: 28px;
+                margin-bottom: 24px;
+            }
+
+            &-price {
+                &-amount {
+                    font-size: 60px;
+                }
+
+                &-currency {
+                    font-size: 28px;
+                }
+            }
+
+            &-description {
+                font-size: 14px;
+                margin-bottom: 28px;
+            }
+
+            &-features {
+                &-item {
+                    &-text {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        @include xxl-screen {
+            padding: 32px;
+
+            &-name {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            &-price {
+                &-amount {
+                    font-size: 50px;
+                }
+
+                &-currency {
+                    font-size: 24px;
+                }
+            }
+
+            &-description {
+                margin-bottom: 24px;
+            }
+
+            &-features {
+                gap: 8px;
+            }
+        }
+
+        @include sm-screen {
+            padding: 32px 24px;
+        }
+    }
+}
+
+// Home 1 end
+
+
+// Home 3 start
+.ticket-three {
+    &-area {
+        &-top {
+            position: relative;
+            z-index: 2;
+        }
+
+        &-bottom {
+            padding-top: 220px;
+            margin-top: -100px;
+            z-index: 1;
+
+            @include xxl-screen {
+                padding-top: 180px;
+            }
+        }
+    }
+
+    &-card {
+        background-color: hsl(var(--white));
+        padding: 60px;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+        position: relative;
+        border-radius: 8px;
+        filter: drop-shadow(0 0 170.7px rgba(11, 9, 65, 0.10));
+
+        @include xxl-screen {
+            padding: 40px;
+        }
+
+        @include xl-screen {
+            padding: 32px;
+        }
+
+        @include lg-screen {
+            padding: 24px;
+        }
+
+        @include sm-screen {
+            padding: 20px;
+        }
+
+        &-tag {
+            text-align: center;
+            font-family: var(--caveat-font);
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 5.7px;
+            margin-bottom: 24px;
+            line-height: 1;
+
+            @include xl-screen {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            @include lg-screen {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-name {
+            color: var(--main-seven-600);
+            text-align: center;
+            font-family: var(--heading-font);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.64px;
+            margin-bottom: 24px;
+
+            @include xl-screen {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            @include lg-screen {
+                font-size: 24px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-price {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            margin-bottom: 32px;
+
+            @include xl-screen {
+                margin-bottom: 24px;
+            }
+
+            @include lg-screen {
+                margin-bottom: 20px;
+            }
+
+            &-amount {
+                font-family: var(--heading-font);
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: -1.6px;
+
+                @include xl-screen {
+                    font-size: 72px;
+                }
+
+                @include lg-screen {
+                    font-size: 60px;
+                }
+
+                @include md-screen {
+                    font-size: 48px;
+                }
+
+                @include sm-screen {
+                    font-size: 36px;
+                }
+            }
+
+            &-currency {
+                font-family: var(--heading-font);
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: -0.72px;
+
+                @include xl-screen {
+                    font-size: 32px;
+                }
+
+                @include lg-screen {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        &-features {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+
+            @include lg-screen {
+                gap: 12px;
+                margin-bottom: 32px;
+            }
+
+            &-item {
+                border-bottom: 1px solid #E8E8E8;
+                width: 100%;
+                text-align: center;
+                padding-bottom: 16px;
+
+                @include lg-screen {
+                    padding-bottom: 12px;
+                }
+
+                &-text {
+                    color: #8E8E8E;
+                    font-family: var(--body-font);
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+// Home 3 end
+
+
+
+// Home 4 start
+.ticket-four {
+    &-area {
+        background: #F4F5F7;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            max-width: 776px;
+            max-height: 776px;
+            width: 100%;
+            height: 100%;
+            border-radius: 776px;
+            filter: blur(200px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        &::after {
+            background: #FFF5CE;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+
+        &::before {
+            background: #D9CEFF;
+            bottom: 30%;
+            left: 0;
+            transform: translate(-50%, 50%);
+        }
+    }
+
+    &-bg-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        background: hsl(var(--white));
+        z-index: -1;
+    }
+
+    &-card {
+        background-color: hsl(var(--white));
+        padding: 60px;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+        position: relative;
+        border-radius: 8px;
+        filter: drop-shadow(0 0 170.7px rgba(11, 9, 65, 0.10));
+
+        @include xxl-screen {
+            padding: 40px;
+        }
+
+        @include xl-screen {
+            padding: 32px;
+        }
+
+        @include lg-screen {
+            padding: 24px;
+        }
+
+        &-tag {
+            text-align: center;
+            font-family: var(--caveat-font);
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 5.7px;
+            margin-bottom: 24px;
+            line-height: 1;
+
+            @include xl-screen {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            @include lg-screen {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-name {
+            color: var(--main-seven-600);
+            text-align: center;
+            font-family: var(--heading-font);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.64px;
+            margin-bottom: 24px;
+
+            @include xl-screen {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            @include lg-screen {
+                font-size: 24px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-price {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            margin-bottom: 32px;
+
+            @include xl-screen {
+                margin-bottom: 24px;
+            }
+
+            @include lg-screen {
+                margin-bottom: 20px;
+            }
+
+            &-amount {
+                font-family: var(--heading-font);
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: -1.6px;
+
+                @include xl-screen {
+                    font-size: 72px;
+                }
+
+                @include lg-screen {
+                    font-size: 60px;
+                }
+
+                @include md-screen {
+                    font-size: 48px;
+                }
+
+                @include sm-screen {
+                    font-size: 36px;
+                }
+            }
+
+            &-currency {
+                font-family: var(--heading-font);
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: -0.72px;
+
+                @include xl-screen {
+                    font-size: 32px;
+                }
+
+                @include lg-screen {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        &-features {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+
+            @include lg-screen {
+                gap: 12px;
+                margin-bottom: 32px;
+            }
+
+            &-item {
+                width: 60%;
+                list-style: disc;
+
+                @include xxl-screen {
+                    width: 80%;
+                }
+
+                @include xl-screen {
+                    width: 90%;
+                }
+
+                @include lg-screen {
+                    width: 70%;
+                }
+
+                @include md-screen {
+                    width: 80%;
+                }
+
+                &-text {
+                    color: #8E8E8E;
+                    font-family: var(--body-font);
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &.active {
+            .ticket-four-card {
+                &-name {
+                    color: hsl(var(--white));
+                }
+
+                &-features {
+                    &-item {
+                        color: hsl(var(--white));
+
+                        &-text {
+                            color: hsl(var(--white));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Home 4 end
+
+
+// Home 5 start
+.ticket-five {
+    &-card {
+        border: 1px solid rgba(255, 255, 255, 0.33);
+        background: rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(17.350000381469727px);
+        border-radius: 8px;
+        padding: 60px 100px;
+        position: relative;
+        overflow: hidden;
+        transition: background 0.5s cubic-bezier(0.40, 0.00, 1.00, 1.00);
+
+
+        @include xxxl-screen {
+            padding: 50px 80px;
+        }
+
+        @include xxl-screen {
+            padding: 40px 60px;
+        }
+
+        @include xl-screen {
+            padding: 30px 40px;
+        }
+
+        @include lg-screen {
+            padding: 20px 30px;
+        }
+
+        @include sm-screen {
+            padding: 16px 24px;
+        }
+
+        .ticket-price-tag-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            @include xl-screen {
+                margin-bottom: 32px;
+            }
+
+            @include lg-screen {
+                margin-bottom: 24px;
+            }
+
+            @include md-screen {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-price {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-currency,
+            &-amount {
+                font-family: var(--heading-font);
+                font-size: 44px;
+                font-weight: 700;
+                line-height: 1;
+
+                @include xl-screen {
+                    font-size: 40px;
+                }
+
+                @include lg-screen {
+                    font-size: 36px;
+                }
+
+                @include md-screen {
+                    font-size: 32px;
+                }
+
+                @include sm-screen {
+                    font-size: 28px;
+                }
+
+                .subscript-text {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-name {
+            font-family: var(--heading-font);
+            color: hsl(var(--white));
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.64px;
+            margin-bottom: 24px;
+
+            @include xl-screen {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            @include lg-screen {
+                font-size: 24px;
+                margin-bottom: 16px;
+            }
+
+            @include md-screen {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+        }
+
+        &-description {
+            font-family: var(--body-font);
+            color: hsl(var(--white));
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-bottom: 32px;
+
+            @include xl-screen {
+                margin-bottom: 24px;
+            }
+
+            @include lg-screen {
+                margin-bottom: 20px;
+            }
+
+            @include md-screen {
+                margin-bottom: 16px;
+            }
+        }
+
+        &-features {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 40px;
+
+            @include lg-screen {
+                gap: 12px;
+                margin-bottom: 32px;
+            }
+
+            @include md-screen {
+                gap: 8px;
+                margin-bottom: 24px;
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                &-icon,
+                &-text {
+                    color: hsl(var(--white));
+                    font-family: var(--body-font);
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+                &-icon {
+                    font-size: 20px;
+
+                    @include lg-screen {
+                        font-size: 18px;
+                    }
+
+                    @include md-screen {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        &-shape {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+// Home 5 End
+
+
+// Home 6 start
+.ticket-six {
+    &-area {
+        &-top {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    &-card {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        padding: 60px;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+        position: relative;
+        border-radius: 8px;
+
+        &:hover {
+            border: 1px solid hsl(var(--white));
+        }
+
+        @include xxl-screen {
+            padding: 40px;
+        }
+
+        @include xl-screen {
+            padding: 32px;
+        }
+
+        @include lg-screen {
+            padding: 24px;
+        }
+
+        &-tag {
+            text-align: center;
+            font-family: var(--caveat-font);
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 5.7px;
+            margin-bottom: 24px;
+            line-height: 1;
+
+            @include xl-screen {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            @include lg-screen {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-name {
+            color: var(--main-five-600);
+            text-align: center;
+            font-family: var(--heading-font);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.64px;
+            margin-bottom: 24px;
+
+            @include xl-screen {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            @include lg-screen {
+                font-size: 24px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-price {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px dashed hsl(var(--white) / 0.30);
+
+            @include xl-screen {
+                margin-bottom: 32px;
+                padding-bottom: 32px;
+            }
+
+            @include lg-screen {
+                margin-bottom: 24px;
+                padding-bottom: 24px;
+            }
+
+            &-amount {
+                font-family: var(--heading-font);
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: -1.6px;
+
+                @include xl-screen {
+                    font-size: 72px;
+                }
+
+                @include lg-screen {
+                    font-size: 60px;
+                }
+
+                @include md-screen {
+                    font-size: 48px;
+                }
+
+                @include sm-screen {
+                    font-size: 36px;
+                }
+            }
+
+            &-currency {
+                font-family: var(--heading-font);
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 1;
+                letter-spacing: -0.72px;
+
+                @include xl-screen {
+                    font-size: 32px;
+                }
+
+                @include lg-screen {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        &-features {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+
+            @include lg-screen {
+                gap: 12px;
+                margin-bottom: 32px;
+            }
+
+            &-item {
+                width: 60%;
+                text-align: left;
+                color: hsl(var(--white));
+                list-style: disc;
+
+                &-text {
+                    color: hsl(var(--white));
+                    font-family: var(--body-font);
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+// Home 6 end
+
+.ticket-ip {
+    &-area {
+        @include lg-screen {
+            padding-bottom: 0px;
+        }
+    }
+}

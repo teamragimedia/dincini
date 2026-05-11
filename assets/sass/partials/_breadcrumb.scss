@@ -1,0 +1,49 @@
+.breadcrumb {
+    &-area {
+        padding-block: 230px 150px;
+
+        @include xl-screen {
+            padding-block: 200px 130px;
+        }
+
+        @include lg-screen {
+            padding-block: 120px 80px;
+        }
+
+        @include md-screen {
+            padding-block: 120px 60px;
+        }
+    }
+
+    &-list {
+        margin-bottom: 32px;
+
+        @include lg-screen {
+            margin-bottom: 24px;
+        }
+
+        @include md-screen {
+            margin-bottom: 20px;
+        }
+
+        @include sm-screen {
+            margin-bottom: 16px;
+        }
+    }
+
+    &-title {
+        font-size: 52px;
+
+        @include xl-screen {
+            font-size: 40px;
+        }
+
+        @include md-screen {
+            font-size: 32px;
+        }
+
+        @include sm-screen {
+            font-size: 28px;
+        }
+    }
+}

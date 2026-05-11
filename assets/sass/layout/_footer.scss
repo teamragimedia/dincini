@@ -1,0 +1,243 @@
+.footer {
+
+    &-widget-title {
+        border-bottom: 1px solid hsl(var(--white)/0.3);
+    }
+
+    &-quick-links-item {
+        transition: .4s;
+
+        .icon {
+            transition: .4s;
+        }
+
+        &:hover {
+            .icon {
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    .copyright-text {
+        margin-bottom: 40px;
+
+        @include lg-screen {
+            margin-bottom: 30px;
+        }
+
+        @include sm-screen {
+            margin-bottom: 24px;
+        }
+    }
+
+    .maquee-box {
+        .maquee-icon {
+            width: 80px;
+            height: 80px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            @include lg-screen {
+                width: 60px;
+                height: 60px;
+            }
+
+            @include md-screen {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+
+
+
+.footer-two {
+    background: #372E22;
+
+    &-social li a {
+        background: rgba(255, 255, 255, 0.16);
+    }
+
+    &-shape {
+        inset-block-end: 0;
+        inset-inline-end: 22%;
+    }
+
+    &-border {
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            background: rgba(255, 255, 255, 0.25);
+        }
+    }
+
+    &-copyright {
+        @include sm-screen {
+            justify-content: center !important;
+        }
+    }
+}
+
+
+
+.footer-three {
+
+    background: var(--main-seven-600);
+    padding-top: 200px;
+    margin-top: -200px;
+
+    @include lg-screen {
+        padding-top: 150px;
+        margin-top: -150px;
+    }
+
+    @include sm-screen {
+        padding-top: 100px;
+        margin-top: -100px;
+    }
+
+    .shape-two {
+        @include xxxxl-screen {
+            display: none;
+        }
+    }
+}
+
+
+.footer-four {
+    padding-top: 200px;
+    margin-top: -200px;
+
+    @include lg-screen {
+        padding-top: 150px;
+        margin-top: -150px;
+    }
+
+    @include sm-screen {
+        padding-top: 100px;
+        margin-top: -100px;
+    }
+}
+
+
+
+
+
+
+.footer-five {
+    &-col {
+        &-1 {
+            @include md-screen {
+                margin-block-end: 60px;
+            }
+
+            @include sm-screen {
+                margin-block-end: 60px;
+                width: 250px;
+            }
+
+            & .logo img {
+                filter: brightness(0) invert(1);
+            }
+
+        }
+
+        &-2 {
+            margin-inline-start: -30px;
+
+            @include md-screen {
+                margin-block-end: 60px;
+            }
+
+            @include md-screen {
+                margin-inline-start: 0;
+            }
+        }
+
+        &-4 {
+            margin-inline-start: -30px;
+
+            @include md-screen {
+                margin-inline-start: 0;
+            }
+        }
+    }
+
+    &-social li a {
+        border: 1px solid rgba(255, 255, 255, 0.21);
+    }
+
+    &-shape-1 {
+        animation: bounce-y 3.5s forwards infinite alternate;
+    }
+
+    &-shape-2 {
+        inset-block-start: 0;
+        inset-inline-end: -45px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.animated-title {
+    font-size: 500px;
+    white-space: nowrap;
+    margin-block-end: -132px;
+    margin-block-start: -80px;
+
+    @include xxxxl-screen {
+        font-size: 440px;
+    }
+
+    @include xxl-screen {
+        font-size: 390px;
+    }
+
+    @include xl-screen {
+        font-size: 340px;
+    }
+
+    @include lg-screen {
+        font-size: 270px;
+        margin-block-end: -60px;
+        margin-block-start: -60px;
+    }
+
+    @include md-screen {
+        font-size: 220px;
+    }
+
+    @include sm-screen {
+        font-size: 200px;
+    }
+}

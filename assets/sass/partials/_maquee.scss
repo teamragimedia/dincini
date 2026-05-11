@@ -1,0 +1,111 @@
+// Home 1 Start
+.maquee {
+     &-area {
+          padding-block: 60px 60px;
+          background: rgba(255, 255, 255, 0.08);
+     }
+
+     &-transition {
+          transition-timing-function: linear;
+     }
+
+     &-icon {
+          transform: translate(-10px);
+
+          & span {
+               animation: rotate-infinte 6s infinite linear;
+          }
+     }
+
+     &-title {
+          &.border-text {
+               -webkit-text-stroke-width: 1px;
+               color: transparent !important;
+               -webkit-text-stroke-color: hsl(var(--white));
+          }
+     }
+
+     @include xl-screen {
+          &-area {
+               padding-block: 40px 40px;
+          }
+     }
+
+     @include lg-screen {
+          &-area {
+               padding-block: 30px 30px;
+          }
+     }
+}
+
+// Home 1 End
+
+
+// Home 2 Start
+.maquee-two {
+     &-area {
+          padding-block: 50px 37px;
+     }
+
+     &-title {
+          -webkit-text-stroke-color: hsl(var(--black)) !important;
+     }
+}
+
+// Home 2 End
+
+
+
+// Home 5 Start
+.maquee-five {
+     &-area {
+          .maquee-icon {
+               max-width: 100px;
+               width: 100%;
+               height: auto;
+
+               img {
+                    width: 100%;
+                    height: auto;
+               }
+
+               @include xxl-screen {
+                    max-width: 80px;
+               }
+
+               @include md-screen {
+                    max-width: 60px;
+               }
+          }
+     }
+}
+
+// Home 5 End
+
+
+
+// Home 6 Start
+.maquee-six {
+     &-area {
+          .maquee-icon {
+               max-width: 100px;
+               width: 100%;
+               height: auto;
+
+               img {
+                    width: 100%;
+                    height: auto;
+               }
+
+               @include xxl-screen {
+                    max-width: 80px;
+               }
+
+               @include md-screen {
+                    max-width: 60px;
+               }
+          }
+     }
+}
+
+// Home 6 End

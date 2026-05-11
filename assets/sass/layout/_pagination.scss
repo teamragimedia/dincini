@@ -1,0 +1,47 @@
+// pagination widget
+.widget-pagination {
+  ul {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+
+    li {
+      cursor: pointer;
+      transition: .4s;
+      border-radius: 50% !important;
+
+      i {
+        font-size: 18px;
+      }
+
+      a {
+        width: 54px;
+        height: 54px;
+        line-height: 1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid hsl(var(--white));
+        background: transparent;
+        color: hsl(var(--white));
+        border-radius: 50% !important;
+        font-weight: 600;
+        transition: .4s;
+        font-size: 16px;
+
+        @media (max-width: 767px) {
+          width: 44px;
+          height: 44px;
+          font-size: 14px;
+        }
+
+        &.active,
+        &:hover {
+          background: var(--main-600);
+          color: hsl(var(--white));
+          border: 1px solid var(--main-600);
+        }
+      }
+    }
+  }
+}

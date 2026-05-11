@@ -1,0 +1,25 @@
+.fw {
+    &-regular {
+        font-weight: 400;
+    }
+
+    &-medium {
+        font-weight: 500;
+    }
+
+    &-semibold {
+        font-weight: 600;
+    }
+
+    &-bold {
+        font-weight: 700;
+    }
+
+    &-extrabold {
+        font-weight: 800;
+    }
+
+    &-black {
+        font-weight: 900;
+    }
+}

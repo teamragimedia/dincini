@@ -1,0 +1,820 @@
+// Home 1 Start
+.testimonial {
+    &-quote-icon {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-end: 20px;
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+        z-index: 1;
+    }
+
+    &-clients-shape {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        padding: 12px;
+        background: hsl(var(--white));
+        border-radius: 50px;
+
+        @include lg-screen {
+            gap: 12px;
+            padding: 10px;
+        }
+
+        @include sm-screen {
+            gap: 8px;
+            padding: 8px;
+            left: 12px;
+            right: 12px;
+        }
+
+        .client-mini-thumbs {
+            display: inline-flex;
+            align-items: center;
+            width: auto;
+
+            .mini-thumbs {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                overflow: hidden;
+                object-fit: cover;
+                margin-left: -20px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                @include lg-screen {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+
+        .client-msg {
+            color: #8E8E8E;
+            font-family: var(--body-font);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 162.5%;
+            letter-spacing: -0.32px;
+            max-width: 150px;
+        }
+    }
+
+    &-trust-logo {
+        margin-bottom: 60px;
+
+        @include xl-screen {
+            margin-bottom: 40px;
+        }
+
+        @include md-screen {
+            margin-bottom: 24px;
+        }
+    }
+
+    &-content-body {
+        margin-bottom: 80px;
+
+        @include xl-screen {
+            margin-bottom: 60px;
+        }
+
+        @include lg-screen {
+            margin-bottom: 40px;
+        }
+
+        @include md-screen {
+            margin-bottom: 32px;
+        }
+
+        @include sm-screen {
+            margin-bottom: 24px;
+        }
+
+        .testimonial-text {
+            font-size: 32px;
+
+            @include xxl-screen {
+                font-size: 28px;
+            }
+
+            @include xl-screen {
+                font-size: 24px;
+            }
+
+            @include md-screen {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &-arrow {
+        button {
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid hsl(var(--white));
+            color: hsl(var(--white));
+            border-radius: 50%;
+            margin: 0 2px 0;
+            font-size: 24px;
+
+            &:hover {
+                background: hsl(var(--white));
+                color: hsl(var(--heading-color));
+            }
+
+            @include xl-screen {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            @include md-screen {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+// Home 1 End
+
+
+
+
+// Home 2 Start
+
+.testimonial-two {
+    &-area {
+        .section-sub-title {
+            padding-bottom: 40px;
+            border-bottom: 1px dashed #D9D9D9;
+
+            @include lg-screen {
+                padding-bottom: 32px;
+            }
+
+            @include md-screen {
+                padding-bottom: 24px;
+            }
+        }
+    }
+
+    &-content-body {
+        margin-bottom: 60px;
+
+        @include xl-screen {
+            margin-bottom: 40px;
+        }
+
+        @include md-screen {
+            margin-bottom: 30px;
+        }
+
+        @include sm-screen {
+            margin-bottom: 24px;
+        }
+
+        .testimonial-two-text {
+            font-size: 32px;
+
+            @include xxl-screen {
+                font-size: 28px;
+            }
+
+            @include xl-screen {
+                font-size: 24px;
+            }
+
+            @include md-screen {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &-arrow {
+        button {
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.14);
+            color: hsl(var(--white));
+            border-radius: 50%;
+            margin: 0 2px 0;
+            font-size: 24px;
+
+            &:hover {
+                background: var(--main-600);
+            }
+
+            @include xl-screen {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            @include md-screen {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+// Home 2 End
+
+
+
+// Home 3 Start
+.testimonial-three {
+    &-swiper-wrapper {
+        margin: 10px;
+    }
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        border-radius: 134px 12px 12px 12px;
+        background: #FFF;
+        box-shadow: 15px 17px 129.3px 18px rgba(22, 8, 72, 0.06);
+
+        @include lg-screen {
+            gap: 20px;
+        }
+
+        @include md-screen {
+            gap: 16px;
+        }
+
+        @include sm-screen {
+            gap: 12px;
+            border-radius: 12px;
+            flex-direction: column;
+        }
+    }
+
+    &-thumb-wrapper {
+        max-width: 236px;
+        max-height: 268px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .quote-icon {
+            position: absolute;
+            inset-block-start: -15px;
+            inset-inline-start: -15px;
+            z-index: 1;
+            width: 80px;
+            height: 80px;
+
+            @include lg-screen {
+                width: 60px;
+                height: 60px;
+            }
+
+            @include md-screen {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    &-thumb {
+        width: 236px;
+        height: 268px;
+        object-fit: cover;
+        border-radius: 123px 12px 12px 12px;
+
+        @include sm-screen {
+            border-radius: 12px;
+        }
+    }
+
+    &-content-wrapper {
+        padding: 24px 24px 24px 0;
+
+        @include lg-screen {
+            padding: 20px 20px 20px 0;
+        }
+
+        @include md-screen {
+            padding: 16px 16px 16px 0;
+        }
+
+        @include sm-screen {
+            padding: 12px;
+        }
+
+        .rating-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+
+            @include lg-screen {
+                margin-bottom: 12px;
+            }
+
+            @include md-screen {
+                margin-bottom: 8px;
+            }
+
+            .rating {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                .rating-icon {
+                    font-size: 20px;
+                    color: var(--main-two-600);
+                }
+            }
+        }
+    }
+}
+
+// Home 3 End
+
+
+// Home 4 Start
+.testimonial-four {
+    &-area {
+        .section-sub-title {
+            padding-bottom: 40px;
+            border-bottom: 1px dashed #D9D9D9;
+
+            @include lg-screen {
+                padding-bottom: 32px;
+            }
+
+            @include md-screen {
+                padding-bottom: 24px;
+            }
+        }
+    }
+
+    &-content-body {
+        margin-bottom: 60px;
+
+        @include xl-screen {
+            margin-bottom: 40px;
+        }
+
+        @include md-screen {
+            margin-bottom: 30px;
+        }
+
+        @include sm-screen {
+            margin-bottom: 24px;
+        }
+
+        .testimonial-four-text {
+            font-size: 32px;
+
+            @include xxl-screen {
+                font-size: 28px;
+            }
+
+            @include xl-screen {
+                font-size: 24px;
+            }
+
+            @include md-screen {
+                font-size: 20px;
+            }
+
+            @include sm-screen {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &-clients {
+        img {
+            max-width: 466px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    }
+
+    &-arrow {
+        button {
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            color: var(--main-600);
+            border: 1px solid var(--main-600);
+            border-radius: 50%;
+            margin: 0 2px 0;
+            font-size: 24px;
+
+            &:hover {
+                color: hsl(var(--white));
+                background: var(--main-600);
+            }
+
+            @include xl-screen {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            @include md-screen {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+// Home 4 End
+
+
+
+// Home 5 Start
+.testimonial-five {
+    &-area {
+        .section-title {
+            font-size: 150px;
+            line-height: 70%;
+
+            @include xxl-screen {
+                font-size: 130px;
+            }
+
+            @include xl-screen {
+                font-size: 110px;
+            }
+
+            @include lg-screen {
+                font-size: 90px;
+            }
+
+            @include md-screen {
+                font-size: 70px;
+            }
+
+            @include sm-screen {
+                font-size: 50px;
+            }
+
+            @include xsm-screen {
+                font-size: 40px;
+            }
+        }
+    }
+
+    &-clients {
+        img {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+    }
+
+    &-trust-logo {
+        margin-bottom: 40px;
+
+        @include xl-screen {
+            margin-bottom: 32px;
+        }
+
+        @include md-screen {
+            margin-bottom: 24px;
+        }
+    }
+
+    &-wrapper {
+        &-content-quote {
+            display: flex;
+            gap: 60px;
+
+            @include xxl-screen {
+                gap: 40px;
+            }
+
+            @include xl-screen {
+                gap: 32px;
+            }
+
+            @include lg-screen {
+                gap: 24px;
+            }
+        }
+    }
+
+    &-quote {
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+        min-height: 90px;
+        background: var(--main-three-200);
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        @include xxl-screen {
+            width: 80px;
+            height: 80px;
+            min-width: 80px;
+            min-height: 80px;
+        }
+
+        @include xl-screen {
+            width: 70px;
+            height: 70px;
+            min-width: 70px;
+            min-height: 70px;
+        }
+
+        @include lg-screen {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            min-height: 60px;
+        }
+
+        @include md-screen {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            min-height: 50px;
+        }
+
+        @include sm-screen {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    &-content-body {
+        margin-bottom: 60px;
+
+        @include xl-screen {
+            margin-bottom: 40px;
+        }
+
+        @include md-screen {
+            margin-bottom: 32px;
+        }
+
+        @include sm-screen {
+            margin-bottom: 24px;
+        }
+
+        .testimonial-text {
+            font-size: 32px;
+
+            @include xxl-screen {
+                font-size: 28px;
+            }
+
+            @include xl-screen {
+                font-size: 24px;
+            }
+
+            @include md-screen {
+                font-size: 20px;
+            }
+
+            @include sm-screen {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &-arrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        button {
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--main-three-600);
+            color: var(--main-three-600);
+            border-radius: 50%;
+            margin: 0 2px 0;
+            font-size: 24px;
+
+            &:hover {
+                background: var(--main-three-600);
+                color: hsl(var(--white));
+            }
+
+            @include xl-screen {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            @include md-screen {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+// Home 5 End
+
+
+// Home 6 Start
+.testimonial-six {
+    &-clients {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    &-clients-shape {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        padding: 12px;
+        // background: hsl(var(--white));
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(13.149999618530273px);
+        border-radius: 50px;
+        width: auto;
+
+        @include lg-screen {
+            gap: 12px;
+            padding: 10px;
+        }
+
+        @include sm-screen {
+            gap: 8px;
+            padding: 8px;
+            left: 12px;
+            right: 12px;
+        }
+
+        .client-mini-thumbs {
+            display: inline-flex;
+            align-items: center;
+            width: auto;
+
+            .mini-thumbs {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                overflow: hidden;
+                object-fit: cover;
+                margin-left: -20px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                @include lg-screen {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+
+        .client-msg {
+            font-family: var(--body-font);
+            color: hsl(var(--white));
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 162.5%;
+            letter-spacing: -0.32px;
+            max-width: 150px;
+        }
+    }
+
+    &-rating {
+
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+
+            @include xl-screen {
+                margin-bottom: 32px;
+            }
+
+            @include md-screen {
+                margin-bottom: 24px;
+            }
+        }
+
+        &-star {
+            color: var(--main-two-600);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+    }
+
+    &-content-body {
+        margin-bottom: 60px;
+
+        @include xl-screen {
+            margin-bottom: 40px;
+        }
+
+        @include md-screen {
+            margin-bottom: 32px;
+        }
+
+        @include sm-screen {
+            margin-bottom: 24px;
+        }
+
+        .testimonial-text {
+            font-size: 32px;
+
+            @include xxl-screen {
+                font-size: 28px;
+            }
+
+            @include xl-screen {
+                font-size: 24px;
+            }
+
+            @include md-screen {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &-arrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        button {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--main-five-600);
+            color: var(--main-five-600);
+            border-radius: 50%;
+            margin: 0 2px 0;
+            font-size: 20px;
+
+            &:hover {
+                background: var(--main-five-600);
+                color: hsl(var(--white));
+            }
+
+            @include xl-screen {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            @include md-screen {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+// Home 6 End

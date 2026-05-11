@@ -1,0 +1,73 @@
+.section-wrapper {
+    margin-bottom: 60px;
+
+    @include lg-screen {
+        margin-bottom: 40px;
+    }
+
+    @include sm-screen {
+        margin-bottom: 32px;
+    }
+}
+
+.section-title {
+    margin-bottom: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: var(--heading-font);
+    letter-spacing: -1.5px;
+
+    @include lg-screen {
+        margin-bottom: 32px;
+    }
+
+    @include md-screen {
+        margin-bottom: 24px;
+    }
+}
+
+.section-sub-title {
+    font-size: 32px;
+    font-weight: 400;
+    font-family: var(--caveat-font);
+    font-style: italic;
+    margin-block-end: 32px;
+    letter-spacing: 5.7px;
+
+    @include lg-screen {
+        font-size: 28px;
+        margin-block-end: 24px;
+        letter-spacing: 4.7px;
+    }
+
+    @include md-screen {
+        font-size: 24px;
+        margin-block-end: 16px;
+        letter-spacing: 3.7px;
+    }
+}
+
+
+
+.section-two {
+    &-title {
+        line-height: 98%;
+
+        @include xl-screen {
+            font-size: 4.4rem;
+        }
+
+        @include sm-screen {
+            font-size: 4rem;
+        }
+    }
+}
+
+.section-five {
+    &-wrapper {
+        @include sm-screen {
+            margin-inline-end: 0;
+        }
+
+    }
+}

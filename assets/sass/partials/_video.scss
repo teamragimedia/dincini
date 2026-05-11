@@ -1,0 +1,485 @@
+// Home 1 Start
+.video {
+    &-area {
+
+        &-spriller-1 {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        &-bg-blur {
+            top: 50% !important;
+            left: 18% !important;
+            background-image: var(--main-two-gradient) !important;
+        }
+
+        &-shape {
+            position: absolute;
+            inset-block-end: -60px;
+            inset-inline-end: -100px;
+            z-index: -1;
+        }
+
+        @include lg-screen {
+            &-spriller-1 {
+                width: 300px;
+                height: 300px;
+            }
+
+            &-shape {
+                width: 100px;
+                height: 300px;
+            }
+        }
+    }
+
+    &-button-wrap {
+        position: absolute;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+
+        .video-button {
+            width: 128px;
+            height: 128px;
+            font-size: 40px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 50%;
+                top: 50%;
+                width: 70%;
+                height: 70%;
+                background-color: var(--main-400);
+                animation: borderanimate2 2s linear infinite;
+                z-index: -1;
+                border-radius: 50%;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: 50%;
+                top: 50%;
+                width: 90%;
+                height: 90%;
+                transform: scale(1.5);
+                border: 1px solid var(--main-400);
+                animation: borderanimate2 2s linear infinite;
+                border-radius: 50%;
+            }
+
+            @include xxl-screen {
+                width: 100px;
+                height: 100px;
+                font-size: 36px;
+            }
+
+            @include xl-screen {
+                width: 90px;
+                height: 90px;
+                font-size: 32px;
+            }
+
+            @include md-screen {
+                width: 80px;
+                height: 80px;
+                font-size: 28px;
+            }
+
+            @include sm-screen {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+// Home 1 End
+
+
+// Home 3 Start
+.video-three {
+    &-area {
+
+        .vidoe-three-vertical-content {
+            position: absolute;
+            padding: 32px 28px;
+            background: var(--main-six-600);
+            border-radius: 12px;
+            border: 4px solid #FFF;
+            z-index: 1;
+            top: 0;
+            left: -30px;
+
+            @include xxl-screen {
+                padding: 24px 20px;
+            }
+
+            @include xl-screen {
+                padding: 20px 16px;
+            }
+
+            @include lg-screen {
+                padding: 16px 12px;
+                left: -20px;
+            }
+
+            @include md-screen {
+                padding: 12px 8px;
+                left: -10px;
+            }
+
+            @include sm-screen {
+                padding: 8px 4px;
+                left: -5px;
+            }
+
+            .video-three-venue {
+                @include md-screen {
+                    font-size: 24px;
+                }
+
+                @include sm-screen {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &-video {
+            img {
+                border-radius: 0 220px 0 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                @include lg-screen {
+                    border-radius: 0 150px 0 0;
+                }
+
+                @include md-screen {
+                    border-radius: 0 100px 0 0;
+                }
+
+                @include sm-screen {
+                    border-radius: 0 50px 0 0;
+                    min-height: 250px;
+                }
+            }
+        }
+
+        .video-button {
+            width: 128px;
+            height: 128px;
+            font-size: 40px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 50%;
+                top: 50%;
+                width: 70%;
+                height: 70%;
+                background-color: var(--main-seven-400);
+                animation: borderanimate2 2s linear infinite;
+                z-index: -1;
+                border-radius: 50%;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: 50%;
+                top: 50%;
+                width: 90%;
+                height: 90%;
+                transform: scale(1.5);
+                border: 1px solid var(--main-seven-400);
+                animation: borderanimate2 2s linear infinite;
+                border-radius: 50%;
+            }
+
+            @include xxl-screen {
+                width: 100px;
+                height: 100px;
+                font-size: 36px;
+            }
+
+            @include xl-screen {
+                width: 90px;
+                height: 90px;
+                font-size: 32px;
+            }
+
+            @include md-screen {
+                width: 80px;
+                height: 80px;
+                font-size: 28px;
+            }
+
+            @include sm-screen {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+        }
+
+        .video-maquee-area {
+            position: relative;
+            z-index: 1;
+            margin-top: -60px;
+
+            @include lg-screen {
+                margin-top: -40px;
+            }
+
+            @include md-screen {
+                margin-top: -32px;
+            }
+
+            @include sm-screen {
+                margin-top: -24px;
+            }
+        }
+    }
+
+    &-button-wrap {
+        position: absolute;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+
+        .video-button {
+            width: 100px;
+            height: 100px;
+            font-size: 36px;
+
+            @include xl-screen {
+                width: 80px;
+                height: 80px;
+                font-size: 32px;
+            }
+
+            @include md-screen {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+// Home 3 End
+
+
+// Home 4 Start
+.video-four {
+    &-area {
+        padding-top: 260px;
+
+        @include xl-screen {
+            padding-top: 200px;
+        }
+
+        @include lg-screen {
+            padding-top: 160px;
+        }
+
+        @include md-screen {
+            padding-top: 120px;
+        }
+
+        @include sm-screen {
+            padding-top: 80px;
+        }
+
+        .video-button {
+            width: 128px;
+            height: 128px;
+            font-size: 40px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 50%;
+                top: 50%;
+                width: 70%;
+                height: 70%;
+                background-color: var(--main-400);
+                animation: borderanimate2 2s linear infinite;
+                z-index: -1;
+                border-radius: 50%;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: 50%;
+                top: 50%;
+                width: 90%;
+                height: 90%;
+                transform: scale(1.5);
+                border: 1px solid var(--main-400);
+                animation: borderanimate2 2s linear infinite;
+                border-radius: 50%;
+            }
+
+            @include xxl-screen {
+                width: 100px;
+                height: 100px;
+                font-size: 36px;
+            }
+
+            @include xl-screen {
+                width: 90px;
+                height: 90px;
+                font-size: 32px;
+            }
+
+            @include md-screen {
+                width: 80px;
+                height: 80px;
+                font-size: 28px;
+            }
+
+            @include sm-screen {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+        }
+    }
+
+    &-button-wrap {
+        margin-bottom: 80px;
+
+        @include xl-screen {
+            margin-bottom: 60px;
+        }
+
+        @include lg-screen {
+            margin-bottom: 40px;
+        }
+
+        @include md-screen {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+// Home 4 End
+
+
+.video-five {
+
+    &-bg {
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+
+        @include xxxxxl-screen {
+            width: 1520px;
+        }
+
+        @include xxxxl-screen {
+            width: 1430px;
+        }
+
+        @include xxxl-screen {
+            width: 1230px;
+        }
+
+        @include xl-screen {
+            width: 1030px;
+        }
+
+        @include lg-screen {
+            width: 820px;
+        }
+
+        @include md-screen {
+            width: 730px;
+        }
+
+        @include sm-screen {
+            width: 535px;
+        }
+
+        @include md-screen {
+            width: 385px;
+        }
+    }
+
+    &-text-shape {
+        inset-block-start: 0;
+        inset-inline-start: 40px;
+    }
+
+    &-shape {
+        &-1 {
+            inset-inline-start: -115px;
+
+            @include md-screen {
+                display: none;
+            }
+        }
+
+        &-2 {
+            inset-inline-end: 9%;
+            inset-block-end: -10%;
+
+            @include sm-screen {
+                inset-inline-end: -5%;
+                inset-block-end: -2%;
+            }
+
+            @include md-screen {
+                display: none;
+            }
+
+        }
+    }
+
+    // video bottom
+    &-bottom {
+        &-area {
+            padding-block: 495px 140px;
+            margin-block-start: -380px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 84%;
+                height: 100%;
+                inset-block-start: 0;
+                inset-inline-start: 0;
+                background: var(--main-seven-600);
+                z-index: -1;
+
+                @include xxxl-screen {
+                    width: 90%;
+                }
+
+                @include xl-screen {
+                    width: 94%;
+                }
+
+                @include sm-screen {
+                    width: 100%;
+                }
+
+            }
+        }
+
+        &-paragraph {
+            @include sm-screen {
+                width: 382px;
+            }
+        }
+    }
+}
