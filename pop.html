@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Drop Scroll Animation</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+        --text-drop-grey-color: #999999;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Lora", sans-serif;
+        background-color: #050506;
+        overflow-x: hidden;
+      }
+
+      /* Start Screen */
+
+      .start {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+        height: 100dvh;
+      }
+
+      .start::after {
+        content: "";
+        position: absolute;
+        top: 25%;
+        right: 20%;
+        z-index: -1;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        transform: rotate(-25deg);
+
+        background: radial-gradient(
+          circle,
+          rgba(6, 255, 255, 1) 33%,
+          rgba(3, 239, 255, 1) 54%,
+          rgba(0, 219, 255, 1) 75%,
+          rgba(0, 203, 244, 1) 83%,
+          rgba(0, 162, 215, 1) 98%,
+          rgba(0, 158, 212, 1) 100%
+        );
+
+        filter: blur(150px);
+      }
+
+      .start__box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 575px;
+        text-align: center;
+      }
+
+      .start__logo {
+        display: block;
+        width: 120px;
+      }
+
+      .start__logo img {
+        width: 100%;
+        display: block;
+      }
+
+      .start__heading {
+        margin: 30px 0 0;
+        color: #fff;
+        font-size: 6rem;
+        line-height: 1.1;
+        font-weight: 500;
+      }
+
+      .start__text {
+        margin: 30px 0 0;
+        font-size: 1.25rem;
+        line-height: 1.4;
+        font-family: "Poppins", sans-serif;
+        color: var(--text-drop-grey-color);
+      }
+
+      @keyframes scroll {
+        0%,
+        100% {
+          opacity: 0.25;
+          transform: translateY(0);
+        }
+
+        50% {
+          opacity: 0.5;
+          transform: translateY(10px);
+        }
+      }
+
+      .scroll-marker {
+        position: absolute;
+        top: calc(100% + 80px);
+        left: calc(50% - 10px);
+        width: 20px;
+        animation: scroll 2.5s ease infinite;
+      }
+
+      .scroll-marker img {
+        width: 100%;
+        display: block;
+      }
+
+      /* TEXT DROP */
+
+      .text-drop {
+        position: relative;
+        overflow: hidden;
+        padding: 5.75rem 0 12rem;
+        perspective: 2000px;
+      }
+
+      .text-drop::after {
+        content: "";
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        z-index: -1;
+
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+
+        background: radial-gradient(
+          circle,
+          rgba(6, 255, 255, 1) 33%,
+          rgba(3, 239, 255, 1) 54%,
+          rgba(0, 219, 255, 1) 75%,
+          rgba(0, 203, 244, 1) 83%,
+          rgba(0, 162, 215, 1) 98%,
+          rgba(0, 158, 212, 1) 100%
+        );
+
+        filter: blur(160px);
+      }
+
+      .text-drop::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        right: 15%;
+        z-index: -1;
+
+        width: 175px;
+        height: 175px;
+        border-radius: 50%;
+
+        background: radial-gradient(
+          circle,
+          rgba(6, 255, 255, 1) 33%,
+          rgba(3, 239, 255, 1) 54%,
+          rgba(0, 219, 255, 1) 75%,
+          rgba(0, 203, 244, 1) 83%,
+          rgba(0, 162, 215, 1) 98%,
+          rgba(0, 158, 212, 1) 100%
+        );
+
+        filter: blur(100px);
+      }
+
+      .text-drop__line {
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        font-size: 9.75vw;
+        line-height: 1.3;
+        font-weight: 500;
+
+        white-space: nowrap;
+
+        color: white;
+
+        transform-origin: 50% 0;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+
+        transform: rotateX(-120deg);
+
+        will-change: transform;
+
+        mix-blend-mode: difference;
+      }
+
+      .text-drop__img-box {
+        position: absolute;
+        overflow: hidden;
+
+        opacity: 0.1;
+        border-radius: 0.5rem;
+
+        transition: opacity 0.5s;
+      }
+
+      .text-drop__img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .text-drop__img-box:nth-child(1) {
+        top: 12%;
+        left: 4%;
+        max-width: 26.5vw;
+      }
+
+      .text-drop__img-box:nth-child(2) {
+        top: 29%;
+        right: 40%;
+        max-width: 26.5vw;
+      }
+
+      .text-drop__img-box:nth-child(3) {
+        top: 68%;
+        right: 9.5%;
+        max-width: 29vw;
+      }
+
+      .text-drop__img-box:nth-child(4) {
+        top: 72%;
+        left: 12%;
+        z-index: 100;
+        max-width: 26.5vw;
+      }
+
+      @media (max-width: 1024px) {
+        .text-drop {
+          padding: 5.75rem 0 15rem;
+        }
+
+        .text-drop__line {
+          font-size: 13.75vw;
+          line-height: 1.4;
+        }
+
+        .text-drop__img-box {
+          max-width: 40vw;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .start__heading {
+          font-size: 4rem;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .start__heading {
+          font-size: 2.5rem;
+        }
+
+        .start__text {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="start">
+      <div class="start__box">
+        <h1 class="start__heading">Scrolling Animation</h1>
+
+        <p class="start__text">
+          Dramatic text presentation is always a good choice. Scroll down to see
+          the animation.
+        </p>
+
+        <div class="scroll-marker">
+          <img
+            src="https://bato-web-agency.github.io/bato-shared/img/text-gsap/arrow.svg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="text-drop">
+      <div
+        class="text-drop__img-box has-prlx"
+        data-speed="0.0001"
+        data-opacity="1"
+      >
+        <img
+          class="text-drop__img"
+          src="https://bato-web-agency.github.io/bato-shared/img/text-drop/img1.png"
+        />
+      </div>
+
+      <div
+        class="text-drop__img-box has-prlx"
+        data-speed="0.0001"
+        data-opacity="0.75"
+      >
+        <img
+          class="text-drop__img"
+          src="https://bato-web-agency.github.io/bato-shared/img/text-drop/img2.png"
+        />
+      </div>
+
+      <div
+        class="text-drop__img-box has-prlx"
+        data-speed="0.0001"
+        data-opacity="1"
+      >
+        <img
+          class="text-drop__img"
+          src="https://bato-web-agency.github.io/bato-shared/img/text-drop/img3.png"
+        />
+      </div>
+
+      <div
+        class="text-drop__img-box has-prlx"
+        data-speed="0.0001"
+        data-opacity="0.75"
+      >
+        <img
+          class="text-drop__img"
+          src="https://bato-web-agency.github.io/bato-shared/img/text-drop/img4.png"
+        />
+      </div>
+
+      <div class="text-drop__line">Art is not only</div>
+      <div class="text-drop__line">a form of</div>
+      <div class="text-drop__line">expression -</div>
+      <div class="text-drop__line">it is a way of</div>
+      <div class="text-drop__line">discovering</div>
+      <div class="text-drop__line">oneself</div>
+    </section>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // LENIS
+
+      const lenis = new Lenis({
+        duration: 1.2,
+        smoothWheel: true,
+        smoothTouch: true,
+        lerp: 0.05,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+
+      // Sync GSAP + Lenis
+
+      lenis.on("scroll", ScrollTrigger.update);
+
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
+
+      // ANIMATION
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const lines = [...document.querySelectorAll(".text-drop__line")];
+
+        const images = [...document.querySelectorAll(".text-drop__img-box")];
+
+        const prlxElements = [...document.querySelectorAll(".has-prlx")];
+
+        lines.forEach((line, index) => {
+          gsap.fromTo(
+            line,
+
+            {
+              rotateX: -120,
+            },
+
+            {
+              rotateX: 0,
+              ease: "power2.out",
+
+              scrollTrigger: {
+                trigger: line,
+                start: "bottom bottom",
+                end: "bottom top",
+                scrub: true,
+              },
+            },
+          );
+
+          if (images[index]) {
+            const targetOpacity = images[index].dataset.opacity || 1;
+
+            let startOffset = window.innerWidth < 1024 ? "-=200" : "-=500";
+
+            gsap.to(images[index], {
+              opacity: targetOpacity,
+
+              ease: "power2.out",
+
+              scrollTrigger: {
+                trigger: line,
+                start: `bottom bottom${startOffset}`,
+                end: "bottom top",
+                scrub: true,
+              },
+            });
+          }
+        });
+
+        prlxElements.forEach((el) => {
+          const speed = parseFloat(el.dataset.speed) || 0.5;
+
+          gsap.to(el, {
+            y: () => -(1 - speed) * 150,
+
+            ease: "none",
+
+            scrollTrigger: {
+              trigger: el,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.5,
+            },
+          });
+        });
+
+        window.addEventListener("resize", () => ScrollTrigger.refresh());
+      });
+    </script>
+  </body>
+</html>
