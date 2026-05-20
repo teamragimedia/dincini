@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>GSAP Expanding Story Modal</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Inter, sans-serif;
+      }
+
+      body {
+        background: #06112f;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      /* cards */
+
+      .cards {
+        padding: 60px;
+        max-width: 1200px;
+        margin: auto;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+        gap: 30px;
+      }
+
+      .card {
+        height: 500px;
+        border-radius: 35px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        transition: 0.7s;
+      }
+
+      .card:hover {
+        transform: translateY(-12px) scale(1.03);
+      }
+
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 1s;
+      }
+
+      .card:hover img {
+        transform: scale(1.1);
+      }
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+      }
+
+      .info {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        z-index: 10;
+      }
+
+      .info h2 {
+        font-size: 38px;
+      }
+
+      .info p {
+        margin-top: 10px;
+        opacity: 0.8;
+      }
+
+      /* detail page */
+
+      .detail {
+        position: fixed;
+        inset: 0;
+
+        background: #06112f;
+
+        overflow: auto;
+
+        opacity: 0;
+        pointer-events: none;
+
+        transition: 0.6s;
+
+        z-index: 999;
+      }
+
+      .detail.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      /* hero */
+
+      .hero {
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero img {
+        width: 100%;
+        height: 120%;
+
+        object-fit: cover;
+      }
+
+      .hero:after {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(transparent, #06112f);
+      }
+
+      .hero-text {
+        position: absolute;
+
+        left: 8%;
+        bottom: 100px;
+
+        z-index: 10;
+      }
+
+      .hero-text h1 {
+        font-size: 8vw;
+        font-weight: 900;
+      }
+
+      .hero-text p {
+        margin-top: 20px;
+
+        font-size: 20px;
+
+        max-width: 500px;
+        line-height: 1.8;
+      }
+
+      /* close */
+
+      .close {
+        position: fixed;
+
+        right: 30px;
+        top: 30px;
+
+        width: 60px;
+        height: 60px;
+
+        border: none;
+
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        font-size: 24px;
+
+        z-index: 9999;
+      }
+
+      /* sections */
+
+      .section {
+        padding: 120px 8%;
+      }
+
+      .section h2 {
+        font-size: 60px;
+
+        margin-bottom: 30px;
+      }
+
+      .section p {
+        max-width: 900px;
+
+        line-height: 2;
+
+        color: #cbd5e1;
+
+        margin-bottom: 25px;
+      }
+
+      /* stats */
+
+      .stats {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 30px;
+
+        margin-top: 60px;
+      }
+
+      .box {
+        padding: 50px;
+
+        background: #122143;
+
+        border-radius: 30px;
+
+        transform: translateY(80px);
+
+        opacity: 0;
+      }
+
+      .box h3 {
+        font-size: 50px;
+
+        margin-bottom: 10px;
+      }
+
+      /* gallery */
+
+      .gallery {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 25px;
+
+        margin-top: 50px;
+      }
+
+      .gallery img {
+        width: 100%;
+
+        height: 500px;
+
+        object-fit: cover;
+
+        border-radius: 30px;
+
+        transform: translateY(100px);
+
+        opacity: 0;
+      }
+
+      /* CTA */
+
+      .cta {
+        margin-top: 80px;
+
+        padding: 80px;
+
+        background: #122143;
+
+        border-radius: 40px;
+
+        text-align: center;
+      }
+
+      .cta h2 {
+        font-size: 60px;
+      }
+
+      .cta button {
+        margin-top: 30px;
+
+        padding: 18px 40px;
+
+        border: none;
+
+        border-radius: 50px;
+
+        font-size: 18px;
+
+        cursor: pointer;
+      }
+
+      /* responsive */
+
+      @media (max-width: 900px) {
+        .cards {
+          padding: 20px;
+        }
+
+        .hero-text h1 {
+          font-size: 50px;
+        }
+
+        .hero {
+          height: 70vh;
+        }
+
+        .section h2 {
+          font-size: 40px;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery img {
+          height: 320px;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+        }
+
+        .cta h2 {
+          font-size: 35px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="cards">
+      <div
+        class="card"
+        data-title="Mountain Escape"
+        data-desc="Explore mountains, rivers and landscapes."
+        data-img="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1600"
+        data-g1="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1000"
+        data-g2="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000"
+        data-g3="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1000"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200"
+        />
+
+        <div class="overlay"></div>
+
+        <div class="info">
+          <h2>Mountain Escape</h2>
+
+          <p>Immersive journey</p>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        data-title="Urban Future"
+        data-desc="Discover architecture and modern city life."
+        data-img="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1600"
+        data-g1="https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=1000"
+        data-g2="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1000"
+        data-g3="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1000"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1200"
+        />
+
+        <div class="overlay"></div>
+
+        <div class="info">
+          <h2>Urban Future</h2>
+
+          <p>City storytelling</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail" id="detail">
+      <button class="close">✕</button>
+
+      <section class="hero">
+        <img id="heroImage" />
+
+        <div class="hero-text">
+          <h1 id="title"></h1>
+
+          <p id="description"></p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>About Experience</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eaque
+          placeat molestiae aperiam laboriosam voluptate officiis voluptatem
+          accusamus.
+        </p>
+
+        <p>
+          Scroll down and sections animate into view with GSAP. This creates a
+          premium storytelling feel.
+        </p>
+
+        <div class="stats">
+          <div class="box">
+            <h3>12K+</h3>
+            <p>Travel Stories</p>
+          </div>
+
+          <div class="box">
+            <h3>98%</h3>
+            <p>User Satisfaction</p>
+          </div>
+
+          <div class="box">
+            <h3>50+</h3>
+            <p>Destinations</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Gallery</h2>
+
+        <div class="gallery">
+          <img id="g1" />
+
+          <img id="g2" />
+
+          <img id="g3" />
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Storytelling</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          ratione molestiae doloremque saepe magni.
+        </p>
+
+        <p>
+          Every image and content block reveals as you scroll. The hero image
+          also moves slightly creating parallax.
+        </p>
+
+        <div class="cta">
+          <h2>Ready for next adventure?</h2>
+
+          <button>Explore More</button>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const detail = document.getElementById("detail");
+
+      document.querySelectorAll(".card").forEach((card) => {
+        card.onclick = () => {
+          detail.classList.add("show");
+
+          heroImage.src = card.dataset.img;
+
+          title.innerText = card.dataset.title;
+
+          description.innerText = card.dataset.desc;
+
+          g1.src = card.dataset.g1;
+
+          g2.src = card.dataset.g2;
+
+          g3.src = card.dataset.g3;
+
+          ScrollTrigger.getAll().forEach((t) => t.kill());
+
+          setTimeout(() => {
+            gsap.from(".hero-text>*", {
+              y: 100,
+              opacity: 0,
+              stagger: 0.2,
+              duration: 1.2,
+            });
+
+            gsap.to(".hero img", {
+              y: 200,
+
+              scrollTrigger: {
+                trigger: ".hero",
+                scroller: ".detail",
+                scrub: 1,
+              },
+            });
+
+            gsap.utils.toArray(".section").forEach((el) => {
+              gsap.from(el, {
+                opacity: 0,
+                y: 100,
+
+                scrollTrigger: {
+                  trigger: el,
+                  scroller: ".detail",
+                  start: "top 80%",
+                },
+              });
+            });
+
+            gsap.to(".gallery img", {
+              opacity: 1,
+              y: 0,
+
+              stagger: 0.2,
+
+              scrollTrigger: {
+                trigger: ".gallery",
+                scroller: ".detail",
+                start: "top 80%",
+              },
+            });
+
+            gsap.to(".box", {
+              opacity: 1,
+              y: 0,
+
+              stagger: 0.2,
+
+              scrollTrigger: {
+                trigger: ".stats",
+                scroller: ".detail",
+                start: "top 80%",
+              },
+            });
+
+            ScrollTrigger.refresh();
+          }, 200);
+        };
+      });
+
+      document.querySelector(".close").onclick = () => {
+        detail.classList.remove("show");
+
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+      };
+    </script>
+  </body>
+</html>
