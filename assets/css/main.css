@@ -12071,6 +12071,9 @@ input:focus-visible {
 .header-three .nav-menu__link::before {
   color: #000;
 }
+.header-three{
+  background: #f0f0f0;
+}
 
 .header-three .tw-menu-bar {
   width: 56px;
