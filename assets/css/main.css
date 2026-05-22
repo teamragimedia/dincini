@@ -77,13 +77,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 /* ========================= Variable Css Start ======================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   /* Font Family Variable */
-  --heading-font: "Urbanist", sans-serif;
-  --body-font: "Urbanist", sans-serif;
-  --caveat-font: "Urbanist", sans-serif;
+  --heading-font: "Bricolage Grotesque", sans-serif;
+  --body-font: "Geist", sans-serif;
+  --caveat-font: "Bricolage Grotesque", sans-serif;
   /* Font Size Variable Start */
   /* Display Font Size Start */
   --display-one: clamp(48px, calc(48px + 3vw), 120px);
@@ -12071,7 +12073,7 @@ input:focus-visible {
 .header-three .nav-menu__link::before {
   color: #000;
 }
-.header-three{
+.header-three {
   background: #f0f0f0;
 }
 
